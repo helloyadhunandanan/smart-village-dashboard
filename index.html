@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Village Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🏡 Smart Village Dashboard</h1>
+    <p>Monitor infrastructure, utilities, and development status of villages across Bharat.</p>
+    <button id="darkModeToggle">🌓 Toggle Theme</button>
+  </header>
+
+  <section class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search by village, state...">
+    <div class="filters">
+      <button onclick="filterCategory('all')">All</button>
+      <button onclick="filterCategory('Infrastructure')">Infrastructure</button>
+      <button onclick="filterCategory('Healthcare')">Healthcare</button>
+      <button onclick="filterCategory('Education')">Education</button>
+    </div>
+  </section>
+
+  <section id="map"></section>
+
+  <section class="village-list" id="villageList">
+    <!-- Cards will be injected here -->
+  </section>
+
+  <footer>
+    <p>Empowering Rural Bharat 🇮🇳 | Digital Dashboard</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
