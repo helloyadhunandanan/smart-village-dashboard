@@ -1,0 +1,146 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid #ff9800;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#darkModeToggle {
+  background: #00695c;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.search-filter {
+  padding: 1rem;
+  text-align: center;
+}
+
+#searchInput {
+  width: 90%;
+  max-width: 400px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filters button {
+  margin: 8px 4px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 20px;
+  background: #607d8b;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#map {
+  height: 450px;
+  width: 100%;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+}
+
+.village-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.village-card {
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.village-card:hover {
+  transform: translateY(-5px);
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.infrastructure {
+  background-color: #3f51b5;
+}
+
+.education {
+  background-color: #ff5722;
+}
+
+.healthcare {
+  background-color: #009688;
+}
+
+footer {
+  background: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #1b5e20;
+}
+
+body.dark-mode .village-card {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode #searchInput,
+body.dark-mode .filters button,
+body.dark-mode #darkModeToggle {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+body.dark-mode #map {
+  filter: grayscale(0.7) brightness(0.9);
+}
